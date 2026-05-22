@@ -64,6 +64,12 @@ class FelineTest {
         assertEquals("Неизвестный вид животного", exception.getMessage());
     }
 
+    @Test
+    void testGetKittensReturnsByDefault() {
+        Feline feline = new Feline();
+        assertEquals(1, feline.getKittens());
+    }
+
     @Spy
     Feline spyFeline;
 
